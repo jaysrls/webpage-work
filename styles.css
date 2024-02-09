@@ -276,6 +276,7 @@ input[type="submit"]:hover {
 
     .imageDisplay,
     .imageDisplayMiddle {
+        margin-top: 10px;
         flex-direction: column;
     }
 
