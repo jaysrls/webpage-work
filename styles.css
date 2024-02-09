@@ -1,20 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-:root{
+
+:root {
     --mainColor: #1a3358;
     --sideColor: #5382b3;
     --sideColorHover: #abcdef;
     --mainColorSummer: #3e5f38;
     --sideColorSummer: #977945;
-    --sideColorHoverSummer:rgb(224, 194, 95) ;
+    --sideColorHoverSummer: rgb(224, 194, 95);
 
 }
-body{
+
+body {
     font-size: 16px;
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
 }
-.mainHeader{
+
+.mainHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,16 +26,19 @@ body{
 
     background-color: var(--mainColor);
 }
-.navList{
+
+.navList {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.navList li{
+
+.navList li {
     list-style: none;
     margin: 0px 30px;
 }
-.navList a{
+
+.navList a {
     color: var(--sideColor);
     text-transform: uppercase;
     text-decoration: none;
@@ -41,7 +47,8 @@ body{
     font-weight: 800;
     transition: 0.3s ease-out;
 }
-.navList .summerA{
+
+.navList .summerA {
     color: var(--sideColorSummer);
     text-transform: uppercase;
     text-decoration: none;
@@ -50,15 +57,18 @@ body{
     font-weight: 800;
     transition: 0.3s ease-out;
 }
-.navList a:hover{
+
+.navList a:hover {
     cursor: pointer;
     transition: 0.3s ease-in;
     color: var(--sideColorHover);
 }
-.logo{
+
+.logo {
     margin-left: 30px;
 }
-.mainPage{
+
+.mainPage {
     width: 100vw;
     height: 90vh;
     background: linear-gradient(to right, #abcdef, var(--sideColor));
@@ -67,20 +77,24 @@ body{
     flex-direction: column;
     justify-content: center;
 }
-.imageContainer{
+
+.imageContainer {
     display: flex;
     justify-content: center;
     width: 80%;
     height: 60%;
 }
-.titleImage{
+
+.titleImage {
     border-radius: 0.5rem;
     width: 47.5%;
     margin: 0% 5%;
     height: 100%;
     background-size: cover;
 }
-.winterMain h1, .mainPage h1{
+
+.winterMain h1,
+.mainPage h1 {
     margin-top: 5%;
     font-size: 3rem;
     font-family: "Montserrat", sans-serif;
@@ -89,8 +103,9 @@ body{
     color: var(--mainColor);
     text-align: center;
 }
+
 /*Non main Page specific*/
-.darkener{
+.darkener {
     position: relative;
     border-radius: 0.5rem;
     top: 0;
@@ -99,15 +114,17 @@ body{
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
 }
-.imageDisplay{
+
+.imageDisplay {
     width: 80%;
     height: 40vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
-.imageDisplayMiddle{
+
+.imageDisplayMiddle {
     width: 80%;
     height: 40vh;
     display: flex;
@@ -115,7 +132,8 @@ body{
     justify-content: center;
     flex-direction: row-reverse;
 }
-.singleImage{
+
+.singleImage {
     background-position: 50% 67%;
     background-size: cover;
     border-radius: 0.5rem;
@@ -124,7 +142,7 @@ body{
 }
 
 /*winter specific*/
-.winterMain{
+.winterMain {
     width: 100vw;
     position: absolute;
     top: 10vh;
@@ -136,7 +154,7 @@ body{
 }
 
 /*Summer specific */
-.summerHeader{
+.summerHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -145,7 +163,8 @@ body{
 
     background-color: var(--mainColorSummer);
 }
-.summerMain h1{
+
+.summerMain h1 {
     margin-top: 5%;
     font-size: 3rem;
     font-family: "Montserrat", sans-serif;
@@ -154,11 +173,12 @@ body{
     color: var(--mainColorSummer);
     text-align: center;
 }
-.navList .summerA:hover{
-    color: var(--sideColorHoverSummer)
-    
+
+.navList .summerA:hover {
+    color: var(--sideColorHoverSummer);
 }
-.summerMain{
+
+.summerMain {
     width: 100vw;
     position: absolute;
     top: 10vh;
@@ -168,9 +188,62 @@ body{
     flex-direction: column;
     justify-content: center;
 }
+
+/*contact stuff*/
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    color: var(--mainColor);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 2px solid var(--mainColor);
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    transition: border-color 0.3s ease, background-color 0.3s ease; /* Added transition for smooth effect */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    color: white;
+    border-color: var(--sideColor); /* Change border color when focused */
+    background-image: linear-gradient(to right, var(--sideColor), var(--mainColor)); /* Flashy background animation */
+
+}
+
+
+
+input[type="submit"] {
+    width: 100%;
+    background-color: var(--mainColor);
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--sideColor);
+}
 @media (max-width: 1000px) {
-    
-    .navList a{
+
+    .navList a {
         color: var(--sideColor);
         text-transform: uppercase;
         text-decoration: none;
@@ -179,33 +252,45 @@ body{
         font-weight: 800;
         transition: 0.3s ease-out;
     }
-    .navList .summerA{
+
+    .navList .summerA {
         font-size: 0.8rem;
     }
-    .navList li{
+
+    .navList li {
         list-style: none;
         margin: 0px 10px;
     }
-    .mainPage, .winterMain, .summerMain{
+
+    .mainPage,
+    .winterMain,
+    .summerMain {
         height: 120vh;
     }
-    header{
+
+    header {
         height: 10vh;
         width: 100vw;
     }
-    .imageDisplay, .imageDisplayMiddle{
+
+    .imageDisplay,
+    .imageDisplayMiddle {
         flex-direction: column;
     }
-    .navList{
+
+    .navList {
         justify-content: space-evenly;
-    }  
-    h1{
+    }
+
+    h1 {
         font-size: 0.5rem;
     }
-    .last{
+
+    .last {
         margin-right: 30px;
     }
-    #last{
+
+    #last {
         margin-right: 30px;
     }
 }
